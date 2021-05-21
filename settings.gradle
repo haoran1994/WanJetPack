@@ -1,2 +1,5 @@
+include ':basecore'
+include ':base'
+include ':basecommon'
 include ':app'
 rootProject.name = "WanJetPack"

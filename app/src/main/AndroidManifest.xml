@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WanJetPack">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.activity.LauncherActivity"></activity>
+        <activity android:name=".ui.activity.ErrorActivity" />
+        <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,0 +1,49 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+apply from: "../common.gradle"
+
+android {
+
+    defaultConfig {
+        consumerProguardFiles "consumer-rules.pro"
+    }
+}
+
+dependencies {
+    api project(path: ':base')
+    api project(path: ':basecommon')
+
+    api "androidx.multidex:multidex:$multidexVersion"
+
+    api "com.zhy:okhttputils:$okhttpUtilVersion"
+
+    // RxHttp
+    api "com.ljx.rxhttp:rxhttp:$rxhttpVersion"
+    api "com.ljx.rxlife:rxlife-coroutine:$rxlifeCoroutine"
+    api "com.ljx.rxlife2:rxlife-rxjava:$rxlifeVersion"  //页面销毁，关闭请求，非必须
+    // RxJava RxAndroid
+    api "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    api "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+    // okhttp
+    api "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    // cookie
+    api 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+
+    //Glide
+    api "com.github.bumptech.glide:glide:$glideVersion"
+    api 'com.github.bumptech.glide:okhttp3-integration:4.9.0' // 新增
+    api 'jp.wasabeef:glide-transformations:3.3.0'
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // 图片选择器
+    api "com.github.LuckSiege.PictureSelector:picture_library:$PictureSelectorVersion"
+    // 指示器
+    api "com.github.hackware1993:MagicIndicator:$MagicIndicatorVersion"
+    // 适配器
+    api "com.github.CymChad:BaseRecyclerViewAdapterHelper:$BaseRecyclerViewAdapterHelperVersion"
+
+    //启动优化异步加载
+    api "com.effective.android:anchors:$anchorsVersion"
+}
